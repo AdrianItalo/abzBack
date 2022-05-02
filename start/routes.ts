@@ -29,10 +29,10 @@ Route.get('/', async () => {
 
 Route.get('/leer', async () => {
   const fs = require("fs");
-  const path = "/home/adrian/Escritorio/abzBackend/subidos/archivo.xls";
+  const path = "./subidos/archivo.xls";
   if(fs.existsSync(path)){
     const excel = XLSX.readFile(
-      "/home/adrian/Escritorio/abzBackend/subidos/archivo.xls"
+      path
     )
     
     console.log(excel)
